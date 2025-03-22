@@ -1,3 +1,6 @@
+//Practica 1: Tic tac toe: juego del gato
+//Ruben Alberto Reyes Santacruz No.:21070394
+
 import { useState } from 'react'; // Importamos el hook useState para manejar el estado del juego.
 import './App.css'; // Importamos los estilos CSS.
 
