@@ -1,38 +1,93 @@
-.App {
+/* Estilos generales */
+body {
+  font-family: Arial, sans-serif;
   text-align: center;
+  background-color: #f4f4f4;
+  margin: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Estilos del tablero */
+.board-row {
+  display: flex;
+  justify-content: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Estilos de los botones (cuadrados) */
+.square {
+  width: 80px;
+  height: 80px;
+  font-size: 32px;
+  font-weight: bold;
+  margin: 5px;
+  background-color: white;
+  border: 3px solid #333;
+  cursor: pointer;
+  transition: 0.3s;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Color de la "X" */
+.square.x {
+  color: #007bff; /* Azul */
+}
+
+/* Color de la "O" */
+.square.o {
+  color: #dc3545; /* Rojo */
+}
+
+.square:hover {
+  background-color: #ddd;
+}
+
+/* Estilo cuando hay un ganador */
+.winning-square {
+  background-color: lightgreen !important;
+}
+
+/* Estilos de la info del juego */
+.game {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.game-info {
+  margin-top: 20px;
+}
+
+/* Botón para ir a movimientos anteriores */
+button {
+  padding: 10px 15px;
+  margin: 5px;
+  border: none;
+  background-color: #007bff;
   color: white;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 16px;
+  border-radius: 5px;
 }
 
-.App-link {
-  color: #61dafb;
+button:hover {
+  background-color: #0056b3;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Botón de reinicio */
+.restart-button {
+  background-color: #dc3545;
+}
+
+.restart-button:hover {
+  background-color: #a71d2a;
+}
+
+/* Estilo del estado del juego */
+.status {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
