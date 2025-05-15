@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Empleados</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Python-Flask-MySQL</h1>
+        <h2>Lista de Empleados</h2>
+        <a href="{{ url_for('crear') }}">Crear nuevo</a>
+    
+        <div class="table-container">
+            <table>
+                <tr><th>ID</th><th>Nombre</th><th>Correo</th><th>Foto</th><th>Acciones</th></tr>
+                {% for emp in empleados %}
+                    <tr>
+                        <td>{{ emp[0] }}</td>
+                        <td>{{ emp[1] }}</td>
+                        <td>{{ emp[2] }}</td>
+                        <td>{{ emp[3] }}</td>
+                        <td>
+                            <a href="{{ url_for('editar', id=emp[0]) }}">Editar</a>
+                            <a href="{{ url_for('eliminar', id=emp[0]) }}" onclick="return confirm('¿Eliminar?')">Eliminar</a>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>    
+</body>
+</html>

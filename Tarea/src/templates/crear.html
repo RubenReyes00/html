@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Crear Empleado</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Crear Empleado</h1>
+        <form method="POST">
+            <input type="text" name="nombre" placeholder="Nombre" required><br>
+            <input type="email" name="correo" placeholder="Correo" required><br>
+            <input type="text" name="foto" placeholder="Ruta de foto"><br>
+            <input type="submit" value="Guardar">
+        </form>
+        <br>
+        <a href="{{ url_for('index') }}">⬅ Volver</a>
+    </div>
+</body>
+</html>

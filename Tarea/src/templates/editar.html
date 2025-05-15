@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Editar Empleado</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Editar Empleado</h1>
+        <form method="POST">
+            <input type="text" name="nombre" value="{{ empleado[1] }}" required><br>
+            <input type="email" name="correo" value="{{ empleado[2] }}" required><br>
+            <input type="text" name="foto" value="{{ empleado[3] }}"><br>
+            <input type="submit" value="Actualizar">
+        </form>
+        <br>
+        <a href="{{ url_for('index') }}">⬅ Volver</a>
+    </div>
+</body>
+</html>
